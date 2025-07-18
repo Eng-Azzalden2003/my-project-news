@@ -52,7 +52,7 @@
                             </div>
                             <div class="overflow-hidden" style="width: 735px;">
                                 <div id="note" class="ps-2">
-                                    <img src="img/features-fashion.jpg" class="img-fluid rounded-circle border border-3 border-primary me-2" style="width: 30px; height: 30px;" alt="">
+                                    <img src="{{ asset('img/features-fashion.jpg') }}" class="img-fluid rounded-circle border border-3 border-primary me-2" style="width: 30px; height: 30px;" alt="">
                                     <a href="#"><p class="text-white mb-0 link-hover">Newsan unknown printer took a galley of type andscrambled Newsan.</p></a>
                                 </div>
                             </div>
@@ -119,8 +119,8 @@
         </div>
         <!-- Navbar End -->
 
-    
-     
+
+
         <!-- Back to Top -->
         <a href="#" class="btn btn-primary border-2 border-white rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
 
