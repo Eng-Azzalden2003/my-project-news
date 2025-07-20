@@ -123,7 +123,7 @@
                 <div class="row g-4">
                     <div class="col-lg-7 col-xl-8 mt-0">
                         <div class="position-relative overflow-hidden rounded">
-                            <img src="{{ asset('newstemp/img/news-1.jpg') }}" class="img-fluid rounded img-zoomin w-100" alt="">
+                            <img src="{{ asset('newstemp/img/news-9.jpg') }}" class="img-fluid rounded img-zoomin w-100" alt="">
                             <div class="d-flex justify-content-center px-4 position-absolute flex-wrap" style="bottom: 10px; left: 0;">
                                 <a href="#" class="text-white me-3 link-hover"><i class="fa fa-clock"></i> 06 minute read</a>
                                 <a href="#" class="text-white me-3 link-hover"><i class="fa fa-eye"></i> 3.5k Views</a>
@@ -132,7 +132,7 @@
                             </div>
                         </div>
                         <div class="border-bottom py-3">
-                            <a href="#" class="display-4 text-dark mb-0 link-hover">Lorem Ipsum is simply dummy text of the printing</a>
+                            <a href="#" class="display-4 text-dark mb-0 link-hover">Lionel Messi the GOAT</a>
                         </div>
                         <p class="mt-3 mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley standard dummy text ever since the 1500s, when an unknown printer took a galley...
                         </p>
@@ -143,12 +143,12 @@
                             <div class="row g-4 align-items-center">
                                 <div class="col-md-6">
                                     <div class="rounded overflow-hidden">
-                                        <img src="{{ asset('newstemp/img/news-2.jpg') }}" class="img-fluid rounded img-zoomin w-100" alt="">
+                                        <img src="{{ asset('newstemp/img/news-11.jpeg') }}" class="img-fluid rounded img-zoomin w-100" alt="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="d-flex flex-column">
-                                        <a href="#" class="h3">Stoneman Clandestine Ukrainian claims successes against Russian.</a>
+                                        <a href="#" class="h3">Barcelona is the Spanish League champion</a>
                                         <p class="mb-0 fs-5"><i class="fa fa-clock"> 06 minute read</i> </p>
                                         <p class="mb-0 fs-5"><i class="fa fa-eye"> 3.5k Views</i></p>
                                     </div>
@@ -161,7 +161,7 @@
                             <div class="row g-4">
                                 <div class="col-12">
                                     <div class="rounded overflow-hidden">
-                                        <img src="{{ asset('newstemp/img/news-3.jpg') }}" class="img-fluid rounded img-zoomin w-100" alt="">
+                                        <img src="{{ asset('newstemp/img/news-10.jpg') }}" class="img-fluid rounded img-zoomin w-100" alt="">
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -175,12 +175,12 @@
                                     <div class="row g-4 align-items-center">
                                         <div class="col-5">
                                             <div class="overflow-hidden rounded">
-                                                <img src="{{ asset('newstemp/img/news-3.jpg') }}" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                <img src="{{ asset('newstemp/img/news-12.jpg') }}" class="img-zoomin img-fluid rounded w-100" alt="">
                                             </div>
                                         </div>
                                         <div class="col-7">
                                             <div class="features-content d-flex flex-column">
-                                                <a href="#" class="h6">Get the best speak market, news.</a>
+                                                <a href="#" class="h6">Swimming World Championships postponed from summer 2025 to May 2026</a>
                                                 <small><i class="fa fa-clock"> 06 minute read</i> </small>
                                                 <small><i class="fa fa-eye"> 3.5k Views</i></small>
                                             </div>
@@ -283,8 +283,9 @@
                 <div class="row g-4 align-items-center">
                     <div class="col-lg-7">
                         <h1 class="mb-4 text-primary">Newsers</h1>
-                        <h1 class="mb-4">Get Every Weekly Updates</h1>
-                        <p class="text-dark mb-4 pb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        <h1 class="mb-4">Lamine Yamal renews his contract with Barcelona and receives the number 10 jersey.</h1>
+                        <p class="text-dark mb-4 pb-2">Lamine Yamal renews his contract with Barcelona and receives the number 10 jersey.
+
                         </p>
                         <div class="position-relative mx-auto">
                             <input class="form-control w-100 py-3 rounded-pill" type="email" placeholder="Your Busines Email">
@@ -293,7 +294,7 @@
                     </div>
                     <div class="col-lg-5">
                         <div class="rounded">
-                            <img src="{{ asset('newstemp/img/banner-img.jpg') }}" class="img-fluid rounded w-100 rounded" alt="">
+                            <img src="{{ asset('newstemp/img/news-13.jpg') }}" class="img-fluid rounded w-100 rounded" alt="">
                         </div>
                     </div>
                 </div>
@@ -392,20 +393,20 @@
                         <div class="col-lg-8 col-xl-9">
                             <div class="d-flex flex-column flex-md-row justify-content-md-between border-bottom mb-4">
                                 <h1 class="mb-4">What’s New</h1>
-                         
+
                             </div>
                             <div class="tab-content mb-4">
                                 <div id="tab-1" class="tab-pane fade show p-0 active">
                                     <div class="row g-4">
                                         <div class="col-lg-8">
                                             <div class="position-relative rounded overflow-hidden">
-                                                <img src="{{ asset('newstemp/img/news-1.jpg') }}" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                <img src="{{ asset('newstemp/img/news-14.jpg') }}" class="img-zoomin img-fluid rounded w-100" alt="">
                                                 <div class="position-absolute text-white px-4 py-2 bg-primary rounded" style="top: 20px; right: 20px;">
                                                     Sports
                                                 </div>
                                             </div>
                                             <div class="my-4">
-                                                <a href="#" class="h4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a>
+                                                <a href="#" class="h4">Xabi Alonso prepares for a new season with Real Madrid.</a>
                                             </div>
                                             <div class="d-flex justify-content-between">
                                                 <a href="#" class="text-dark link-hover me-3"><i class="fa fa-clock"></i> 06 minute read</a>
@@ -1006,7 +1007,7 @@
                                     </div>
                                 </div>
                             </div>
-                   
+
                         </div>
                         <div class="col-lg-4 col-xl-3">
                             <div class="row g-4">
