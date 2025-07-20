@@ -760,7 +760,7 @@
                                                     <div class="row g-4 align-items-center">
                                                         <div class="col-5">
                                                             <div class="overflow-hidden rounded">
-                                                                <img src="{{ asset('newstemp/img/news-4.jpg') }}" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                                <img src="{{ asset('newstemp/img/news-16.jpg') }}" class="img-zoomin img-fluid rounded w-100" alt="">
                                                             </div>
                                                         </div>
                                                         <div class="col-7">
@@ -939,7 +939,7 @@
                                 <div class="latest-news-item">
                                     <div class="bg-light rounded">
                                         <div class="rounded-top overflow-hidden">
-                                            <img src="{{ asset('newstemp/img/news-7.jpg') }}" class="img-zoomin img-fluid rounded-top w-100" alt="">
+                                            <img src="{{ asset('newstemp/img/news-19.jpeg') }}" class="img-zoomin img-fluid rounded-top w-100" alt="">
                                         </div>
                                         <div class="d-flex flex-column p-4">
                                             <a href="#" class="h4">There are many variations of passages of Lorem Ipsum available,</a>
@@ -953,7 +953,7 @@
                                 <div class="whats-item">
                                     <div class="bg-light rounded">
                                         <div class="rounded-top overflow-hidden">
-                                            <img src="{{ asset('newstemp/img/news-6.jpg') }}" class="img-zoomin img-fluid rounded-top w-100" alt="">
+                                            <img src="{{ asset('newstemp/img/news-18.jpg') }}" class="img-zoomin img-fluid rounded-top w-100" alt="">
                                         </div>
                                         <div class="d-flex flex-column p-4">
                                             <a href="#" class="h4">There are many variations of passages of Lorem Ipsum available,</a>
@@ -967,7 +967,7 @@
                                 <div class="whats-item">
                                     <div class="bg-light rounded">
                                         <div class="rounded-top overflow-hidden">
-                                            <img src="{{ asset('newstemp/img/news-3.jpg') }}" class="img-zoomin img-fluid rounded-top w-100" alt="">
+                                            <img src="{{ asset('newstemp/img/news-17.jpg') }}" class="img-zoomin img-fluid rounded-top w-100" alt="">
                                         </div>
                                         <div class="d-flex flex-column p-4">
                                             <a href="#" class="h4">There are many variations of passages of Lorem Ipsum available,</a>
@@ -981,10 +981,10 @@
                                 <div class="whats-item">
                                     <div class="bg-light rounded">
                                         <div class="rounded-top overflow-hidden">
-                                            <img src="{{ asset('newstemp/img/news-4.jpg') }}" class="img-zoomin img-fluid rounded-top w-100" alt="">
+                                            <img src="{{ asset('newstemp/img/news-16.jpg') }}" class="img-zoomin img-fluid rounded-top w-100" alt="">
                                         </div>
                                         <div class="d-flex flex-column p-4">
-                                            <a href="#" class="h4">There are many variations of passages of Lorem Ipsum available,</a>
+                                            <a href="#" class="h4">**What is the fate of the English Premier League?</a>
                                             <div class="d-flex justify-content-between">
                                                 <a href="#" class="small text-body link-hover">by Willium Smith</a>
                                                 <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> Dec 9, 2024</small>
@@ -995,7 +995,7 @@
                                 <div class="whats-item">
                                     <div class="bg-light rounded">
                                         <div class="rounded-top overflow-hidden">
-                                            <img src="{{ asset('newstemp/img/news-5.jpg') }}" class="img-zoomin img-fluid rounded-top w-100" alt="">
+                                            <img src="{{ asset('newstemp/img/news-20.jpg') }}" class="img-zoomin img-fluid rounded-top w-100" alt="">
                                         </div>
                                         <div class="d-flex flex-column p-4">
                                             <a href="#" class="h4">There are many variations of passages of Lorem Ipsum available,</a>
