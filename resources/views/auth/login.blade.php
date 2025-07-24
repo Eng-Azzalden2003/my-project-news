@@ -101,8 +101,8 @@
 
 
   <!--plugins-->
-  <script src="{{asset('dashboard_asset/assets/js/jquery.min.js')}}"></script>
-  <script src="{{asset('dashboard_asset/assets/js/pace.min.js')}}"></script>
+  {{-- <script src="{{asset('dashboard_asset/assets/js/jquery.min.js')}}"></script>
+  <script src="{{asset('dashboard_asset/assets/js/pace.min.js')}}"></script> --}}
 
 
 </body>
