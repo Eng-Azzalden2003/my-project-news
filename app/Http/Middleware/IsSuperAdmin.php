@@ -17,8 +17,8 @@ class IsSuperAdmin
     public function handle(Request $request, Closure $next): Response
     {
       
-        if (!Auth::guard('superadmin')->check()) {
-            return redirect()->route('superadmin.login');
+        if (!Auth::guard('super-admin')->check()) {
+            return redirect()->route('super-admin.login');
         }
         return $next($request);
     }

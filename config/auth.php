@@ -36,17 +36,44 @@ return [
     */
 
     'guards' => [
-        'web' => [
+        //admin
+        'super-admin' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'super-admin',
         ],
-          'admin' => [
+        'admin' => [
             'driver' => 'session',
             'provider' => 'admins',
         ],
-          'superadmin' => [
+        // world head
+        'world-head' => [
             'driver' => 'session',
-            'provider' => 'superadmins',
+            'provider' => 'world-head',
+        ],
+        // sports head
+        'sports-head' => [
+            'driver' => 'session',
+            'provider' => 'sports-head',
+        ],
+        // fashion head
+        'fashion-head' => [
+            'driver' => 'session',
+            'provider' => 'fashion-head',
+        ],
+        // world writer
+        'world-writer' => [
+            'driver' => 'session',
+            'provider' => 'world-writer',
+        ],
+        // sports writer
+        'sports-writer' => [
+            'driver' => 'session',
+            'provider' => 'sports-writer',
+        ],
+        // fashion writer
+        'fashion-writer' => [
+            'driver' => 'session',
+            'provider' => 'fashion-writer',
         ],
     ],
 
@@ -66,23 +93,42 @@ return [
     | Supported: "database", "eloquent"
     |
     */
-
+    //
     'providers' => [
-        'users' => [
+
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => env('AUTH_MODEL', App\Models\User::class),
+        ],
+        'super-admin' => [
+            'driver' => 'eloquent',
+            'model' => env('AUTH_MODEL', App\Models\SuperAdmin::class),
+        ],
+        'world-head' => [
+            'driver' => 'eloquent',
+            'model' => env('AUTH_MODEL', App\Models\User::class),
+        ],
+        'sports-head' => [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', App\Models\User::class),
         ],
 
-        'admins' => [
+        'fashion-head' => [
             'driver' => 'eloquent',
-            'model' => env('AUTH_MODEL', App\Models\Admin::class),
+            'model' => env('AUTH_MODEL', App\Models\User::class),
         ],
-
-        'superadmins' => [
+        'world-writer' => [
             'driver' => 'eloquent',
-            'model' => env('AUTH_MODEL', App\Models\SuperAdmin::class),
+            'model' => env('AUTH_MODEL', App\Models\User::class),
         ],
-
+        'sports-writer' => [
+            'driver' => 'eloquent',
+            'model' => env('AUTH_MODEL', App\Models\User::class),
+        ],
+        'fashion-writer' => [
+            'driver' => 'eloquent',
+            'model' => env('AUTH_MODEL', App\Models\User::class),
+        ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
