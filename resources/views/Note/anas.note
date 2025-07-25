@@ -1,0 +1,68 @@
+----------------------- to make the site under mintainse اي تحت الصيانة
+
+--- 1- php artisan make:middleware SelectiveMaintenance :
+in the page we write ::
+
+ public function handle(Request $request, Closure $next): Response
+    {
+        
+        $routesUnderMaintenance = [
+            // add the routes that should be under maintenance المسارات التي يجب أن تكون تحت الصيانة
+            'news',
+            'news/sport',
+        ];
+
+        foreach ($routesUnderMaintenance as $route) {
+            if ($request->is($route)) {
+                return response()->view('errors.503', [], 503);
+            }
+        }
+
+
+        return $next($request);
+        
+    }
+
+--- 2- bootsrap / app .php :
+    ->withMiddleware(function (Middleware $middleware): void {
+        //
+            $middleware->append(\App\Http\Middleware\SelectiveMaintenance::class);
+    })
+
+--- 3- php artisan down توقف كل الموقع 
+--- 4- php artisan up  ترجع الموقع شغال ما عدا المسارات اللي حددتها في مودل 
+--- 5- php artisan down --secret="رمز سري"
+   اللي بحطه الركز السري بشوف ولا كن يجب تعديله في المدل وير
+ public function handle(Request $request, Closure $next): Response
+    {
+
+        $pathsUnderMaintenance = [
+            // 'news',
+            // 'news/sport',
+            // 'news/tech',
+        ];
+
+        $bypassToken = '1';// كلمة السر في الراوت اللي بتخلي يعمل رغم الصيانة
+
+        if (in_array($request->path(), $pathsUnderMaintenance)) {
+
+            if (
+                $request->query('secret') === $bypassToken ||
+                $request->cookie('bypass_maintenance') === $bypassToken
+            ) {
+                cookie()->queue(cookie('bypass_maintenance', $bypassToken, 60));
+                return $next($request);
+            }
+
+            return response()->view('errors.503', [], 503);
+        }
+
+        return $next($request);
+    }
+
+http://127.0.0.1:8000/news?secret=1
+
+--- 6- الموقع حيشغل كل الروابط ماعد اللي انا محددهم php artisan up انا طالما عامل في ---------- الراوتات اللي بديش تظهر حتى لوحط  
+                                                                                                           middleware
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
