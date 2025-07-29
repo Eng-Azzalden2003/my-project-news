@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\news\newsController;
 use App\Http\Middleware\IsAdmin;
@@ -9,7 +10,8 @@ use Illuminate\Container\Attributes\Log;
 use Illuminate\Support\Facades\Route;
 
 Route::get('', function () {
-    return view('auth.login');
+    $guard = request()->route('guard') ;
+    return view('auth.login',compact('guard'));
 });
 // Route::get ('/',function () {
 //     return view('news.master');
@@ -20,17 +22,18 @@ Route::prefix('news')->name('news.')->controller(newsController::class)->group(f
     Route::get('/ technology', 'technology')->name('technology');
     Route::get('/lifeStyle', 'lifeStyle')->name('lifeStyle');
 });
-Route::prefix('super-admin')->name('super-admin.')->group(function () {
-    Route::get('login',[LoginController::class, 'index'])->name('login')->defaults('guard', 'super-admin');
-    Route::post('login', [LoginController::class, 'login'])->name('login.submit')->defaults('guard', 'super-admin');
-        // محمية بـ auth
-    Route::middleware(IsSuperAdmin::class)->group(function () {
-        Route::get('/dashboard', function () {
-            return view('super-admin.dashboard');
-        })->name('dashboard');
-    });
-
+Route::prefix('super-admin')->name('super-admin.')->controller(AuthController::class)->group(function () {
+    // Super Admin Login Routes
+    Route::get('login', 'index')->name('login')->defaults('guard', 'super-admin');
+    Route::post('login',  'login')->name('login.submit')->defaults('guard', 'super-admin');
+    // Super Admin foreget-password Route
+    // Route::get('forget-password',  'forget-password')->name('forget-password')->defaults('guard', 'super-admin');
+    // Route::post('forget-password','forget-password.submit' )->name('forget-password.submit')->defaults('guard', 'super-admin');
+        // محمية بـ auth>defaults('guard', 'super-admin');
+    Route::get('dashboard','dashboard')->name('dashboard')->middleware(IsSuperAdmin::class)->defaults('guard', 'super-admin');
 });
+
+
 
 
 
