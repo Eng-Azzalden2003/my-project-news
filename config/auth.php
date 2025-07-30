@@ -39,7 +39,7 @@ return [
         //admin
         'super-admin' => [
             'driver' => 'session',
-            'provider' => 'super-admin',
+            'provider' => 'super_admins',
         ],
         'admin' => [
             'driver' => 'session',
@@ -100,7 +100,7 @@ return [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', App\Models\User::class),
         ],
-        'super-admin' => [
+        'super_admins' => [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', App\Models\SuperAdmin::class),
         ],
@@ -157,6 +157,12 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => env('AUTH_PASSWORD_RESET_TOKEN_TABLE', 'password_reset_tokens'),
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'super_admins' => [
+            'provider' => 'super_admins',
             'table' => env('AUTH_PASSWORD_RESET_TOKEN_TABLE', 'password_reset_tokens'),
             'expire' => 60,
             'throttle' => 60,

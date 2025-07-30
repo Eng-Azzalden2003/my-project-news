@@ -13,8 +13,8 @@ Route::get('', function () {
     $guard = request()->route('guard') ;
     return view('auth.login',compact('guard'));
 });
-// Route::get ('/',function () {
-//     return view('news.master');
+// Route::get ('/index',function () {
+//     return view('auth.reset-password');
 // });
 Route::prefix('news')->name('news.')->controller(newsController::class)->group(function(){
     Route::get('/', 'index')->name('index');
@@ -27,8 +27,16 @@ Route::prefix('super-admin')->name('super-admin.')->controller(AuthController::c
     Route::get('login', 'index')->name('login')->defaults('guard', 'super-admin');
     Route::post('login',  'login')->name('login.submit')->defaults('guard', 'super-admin');
     // Super Admin foreget-password Route
-    // Route::get('forget-password',  'forget-password')->name('forget-password')->defaults('guard', 'super-admin');
-    // Route::post('forget-password','forget-password.submit' )->name('forget-password.submit')->defaults('guard', 'super-admin');
+    Route::get('forget-password',  'indexForgetPassword')->name('forget-password')->defaults('guard', 'super-admin');
+    Route::post('forget-password','forgetPassword' )->name('forget-password.submit')->defaults('guard', 'super-admin');
+     Route::get('reset-password/{token}',  'showResetForm')
+            ->name('password.reset')
+            ->defaults('guard', 'super-admin');
+
+
+        Route::post('reset-password', 'resetPassword')
+            ->name('password.update')
+            ->defaults('guard', 'super-admin');
         // محمية بـ auth>defaults('guard', 'super-admin');
     Route::get('dashboard','dashboard')->name('dashboard')->middleware(IsSuperAdmin::class)->defaults('guard', 'super-admin');
 });
